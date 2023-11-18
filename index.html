@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav_logo">Construction</a>
+            <ul class="nav_items">
+                <li class="nav_items">
+                    <a href="#" class="nav_link">Home</a>
+                    <a href="#" class="nav_link">Service</a>
+                    <a href="#" class="nav_link">Contact</a>
+                    <!-- <a href="#" class="nav_link" id="form-open">Add new Property</a> -->
+
+                    <a href="#" id="form-open">Add new Property</a>
+                    <!-- <div class="add_new_property" style="display: none;">
+                        <form action="#">
+                            <h2>Add new Property</h2>
+                            <button class="button">Add Property</button>
+                        </form>
+                    </div> -->
+
+                    
+                    <a href="#" class="nav_link">View Property</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <div>
+            <div class="container1">
+               
+                <button class="button button1" onclick="login()">Login</button>
+                <button class="button button2" onclick="signup()">Sign Up</button>
+                <div id="login-content" style="display: none;">
+                  <form>
+                    <label for="uname">Username:</label><br>
+                    <input type="text" id="uname" name="uname"><br>
+                    <label for="pwd">Password:</label><br>
+                    <input type="password" id="pwd" name="pwd"><br>
+                    <input type="submit" value="Submit">
+                  </form>
+                </div>
+                <div>
+                    <div id="signup-content" style="display: none;">
+                        <form>
+                          <label for="uname">Username:</label><br>
+                          <input type="text" id="uname" name="uname"><br>
+                          <label for="email">Email:</label><br>
+                          <input type="text" id="email" name="email"><br>
+                          <label for="pwd">Password:</label><br>
+                          <input type="password" id="pwd" name="pwd"><br>
+                          <input type="submit" value="Submit">
+                        </form>
+                      </div>
+                </div>
+        </div>
+    </div>
+    <section class="home">
+        <div class="form_container">
+            <i class="uil uil-times form_close"></i>
+            <div class="add_new_property" style="display: none;">
+                <form action="#">
+                    <h2>Add new Property</h2>
+                    <div class="input_box">
+                        <input type="text" placeholder="Enter your name of the Property" />
+                        <i class="uil uil-envelope-alt Name"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="file" placeholder="Choose a file" />
+                        <i class="uil uil-envelope-alt file"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="Enter the location of this Property" />
+                        <i class="uil uil-lock Location"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="Add Price" />
+                        <i class="uil uil-price"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="Describe something about the Property" />
+                        <i class="uil uil-Description"></i>
+                    </div>
+                    <button class="button">Add Property</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script >
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('form-open').addEventListener('click', function() {
+        document.querySelector('.add_new_property').style.display = 'block';
+    });
+});
+function login() {
+ document.getElementById('login-content').style.display = 'block';
+ document.getElementById('signup-content').style.display = 'none';
+}
+
+function signup() {
+ document.getElementById('login-content').style.display = 'none';
+ document.getElementById('signup-content').style.display = 'block';
+}
+
+    </script>
+</body>
+</html>
